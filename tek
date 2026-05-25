@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEKA Logistic - Transport & Mutări</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #1e3a8a, #0f172a);
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #38bdf8;
+}
+
+header p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+nav {
+    background: #111827;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    background: #111827;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    background: #38bdf8;
+    padding: 10px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>TEKA Logistic</h1>
+    <p>Curse internaționale • Mutări • Transport marfă • Livrări</p>
+</header>
+
+<nav>
+    <a href="#servicii">Servicii</a>
+    <a href="#despre">Despre noi</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="servicii">
+    <h2>Serviciile noastre</h2>
+    <div class="services">
+        <div class="card">🚚 Transport marfă</div>
+        <div class="card">🏠 Mutări locuințe</div>
+        <div class="card">📦 Livrări rapide</div>
+        <div class="card">🌍 Curse internaționale</div>
+        <div class="card">📊 Logistică și distribuție</div>
+    </div>
+</section>
+
+<section id="despre">
+    <h2>Despre noi</h2>
+    <p>
+        TEKA Logistic oferă servicii de transport și logistică în Italia și Europa.
+        Ne concentrăm pe siguranță, rapiditate și seriozitate.
+    </p>
+</section>
+
+<section id="galerie" class="gallery">
+    <h2>Galerie</h2>
+    <img src="https://via.placeholder.com/800x400?text=Transport+Marfa">
+    <img src="https://via.placeholder.com/800x400?text=Mutari+Mobilier">
+    <img src="https://via.placeholder.com/800x400?text=Curse+Internationale">
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <p>📞 Telefon: +39 XXX XXX XXX</p>
+    <p>📧 Email: contact@teka-logistic.com</p>
+    <p>📍 Italia / Europa</p>
+
+    <form>
+        <input type="text" placeholder="Nume">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Mesaj"></textarea>
+        <button>Trimite mesaj</button>
+    </form>
+
+    <h3>Hartă</h3>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
+        width="100%" height="250" style="border:0;">
+    </iframe>
+</section>
+
+<a class="whatsapp" 
+href="https://wa.me/393XXXXXXXXX" target="_blank">
+💬 WhatsApp
+</a>
+
+</body>
+</html>    
