@@ -3,99 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEKA Logistic - Transport & Mutări</title>
+<title>TEKA Logistic</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
+    background: #111;
     color: white;
 }
 
-header {
-    background: linear-gradient(90deg, #1e3a8a, #0f172a);
-    padding: 40px;
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    padding: 40px 20px;
 }
 
-header h1 {
-    font-size: 40px;
-    margin: 0;
-    color: #38bdf8;
-}
-
-header p {
-    font-size: 18px;
-    color: #cbd5e1;
-}
-
-nav {
-    background: #111827;
+.logo {
+    width: 230px;
+    border-radius: 20px;
+    background: white;
     padding: 10px;
-    text-align: center;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
+h1 {
+    font-size: 48px;
+    color: #d4a44a;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #d4a44a;
+    color: #111;
+    padding: 15px 25px;
+    border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 section {
-    padding: 40px;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.services {
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #d4a44a;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 15px;
+    height: 220px;
+    object-fit: cover;
 }
 
 .contact {
-    background: #111827;
-    padding: 30px;
-    border-radius: 10px;
+    background: #1c1c1c;
+    border-radius: 15px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 6px;
+    padding: 12px;
+    margin: 8px 0;
     border: none;
+    border-radius: 8px;
 }
 
 button {
-    background: #38bdf8;
-    padding: 10px;
-    border: none;
+    background: #d4a44a;
     color: black;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 14px;
+    border: none;
     width: 100%;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
 .whatsapp {
     position: fixed;
-    bottom: 20px;
     right: 20px;
+    bottom: 20px;
     background: #25D366;
-    padding: 15px;
-    border-radius: 50px;
     color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -104,69 +125,60 @@ button {
 
 <body>
 
-<header>
+<div class="hero">
+    <img src="logo.png" class="logo" alt="TEKA Logistic Logo">
     <h1>TEKA Logistic</h1>
-    <p>Curse internaționale • Mutări • Transport marfă • Livrări</p>
-</header>
+    <p>Curse internaționale • Mutări • Transport marfă • Livrări • Logistică</p>
+    <a href="#contact" class="btn">Cere ofertă acum</a>
+</div>
 
-<nav>
-    <a href="#servicii">Servicii</a>
-    <a href="#despre">Despre noi</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="servicii">
+<section>
     <h2>Serviciile noastre</h2>
-    <div class="services">
-        <div class="card">🚚 Transport marfă</div>
-        <div class="card">🏠 Mutări locuințe</div>
-        <div class="card">📦 Livrări rapide</div>
-        <div class="card">🌍 Curse internaționale</div>
-        <div class="card">📊 Logistică și distribuție</div>
+    <div class="cards">
+        <div class="card">🚚 Transport marfă rapid și sigur</div>
+        <div class="card">🏠 Mutări apartamente și case</div>
+        <div class="card">📦 Livrări colete și paleți</div>
+        <div class="card">🌍 Curse internaționale Europa</div>
+        <div class="card">📍 Logistică și distribuție</div>
+        <div class="card">🤝 Colaborări cu firme și depozite</div>
     </div>
 </section>
 
-<section id="despre">
-    <h2>Despre noi</h2>
-    <p>
-        TEKA Logistic oferă servicii de transport și logistică în Italia și Europa.
-        Ne concentrăm pe siguranță, rapiditate și seriozitate.
-    </p>
+<section>
+    <h2>De ce TEKA Logistic?</h2>
+    <div class="cards">
+        <div class="card">✅ Seriozitate și punctualitate</div>
+        <div class="card">✅ Marfă transportată în siguranță</div>
+        <div class="card">✅ Comunicare rapidă prin WhatsApp</div>
+    </div>
 </section>
 
-<section id="galerie" class="gallery">
+<section>
     <h2>Galerie</h2>
-    <img src="https://via.placeholder.com/800x400?text=Transport+Marfa">
-    <img src="https://via.placeholder.com/800x400?text=Mutari+Mobilier">
-    <img src="https://via.placeholder.com/800x400?text=Curse+Internationale">
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="dubă logistică">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" alt="cutii depozit">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c" alt="depozit logistic">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec" alt="client fericit">
+    </div>
 </section>
 
 <section id="contact" class="contact">
     <h2>Contact</h2>
-
     <p>📞 Telefon: +39 XXX XXX XXX</p>
     <p>📧 Email: contact@teka-logistic.com</p>
     <p>📍 Italia / Europa</p>
 
     <form>
-        <input type="text" placeholder="Nume">
+        <input type="text" placeholder="Numele tău">
         <input type="email" placeholder="Email">
-        <textarea placeholder="Mesaj"></textarea>
-        <button>Trimite mesaj</button>
+        <input type="text" placeholder="Telefon">
+        <textarea placeholder="Ce ai nevoie să transporți?"></textarea>
+        <button>Trimite cererea</button>
     </form>
-
-    <h3>Hartă</h3>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
-        width="100%" height="250" style="border:0;">
-    </iframe>
 </section>
 
-<a class="whatsapp" 
-href="https://wa.me/393XXXXXXXXX" target="_blank">
-💬 WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/393XXXXXXXXX" target="_blank">💬 WhatsApp</a>
 
 </body>
-</html>    
+</html>
