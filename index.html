@@ -6,179 +6,344 @@
 <title>TEKA Logistic</title>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: white;
 }
 
-.hero {
-    min-height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
-        url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 40px 20px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
+  background: #0b0b0b;
+  border-bottom: 1px solid #333;
 }
 
 .logo {
-    width: 230px;
-    border-radius: 20px;
-    background: white;
-    padding: 10px;
+  width: 170px;
 }
 
-h1 {
-    font-size: 48px;
-    color: #d4a44a;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 800px;
-    margin: auto;
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    background: #d4a44a;
-    color: #111;
-    padding: 15px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+  background: #c9962e;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 70px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.gold {
+  color: #c9962e;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.hero-img {
+  width: 48%;
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  filter: drop-shadow(0 20px 30px black);
+  border-radius: 20px;
+}
+
+.boxes {
+  font-size: 60px;
+  position: absolute;
+  bottom: -25px;
+  right: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.icons div {
+  color: #d6d6d6;
+  font-size: 14px;
 }
 
 section {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: auto;
+  padding: 70px 7%;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+h2 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 35px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background: #1c1c1c;
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid #d4a44a;
+  background: #151515;
+  padding: 30px;
+  border: 1px solid #c9962e;
+  border-radius: 14px;
+  text-align: center;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+.card h3 {
+  color: #c9962e;
 }
 
-.gallery img {
-    width: 100%;
-    border-radius: 15px;
-    height: 220px;
-    object-fit: cover;
+.fleet {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.fleet img {
+  width: 55%;
+  border-radius: 20px;
+}
+
+.clients {
+  background: #111;
+}
+
+.client-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  background: #171717;
+  border-radius: 18px;
+  padding: 35px;
+  border: 1px solid #333;
+}
+
+.client-photo {
+  background: linear-gradient(135deg, #222, #000);
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 80px;
 }
 
 .contact {
-    background: #1c1c1c;
-    border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  background: #101010;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 8px;
+form input, form textarea, form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #191919;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
 }
 
 button {
-    background: #d4a44a;
-    color: black;
-    padding: 14px;
-    border: none;
-    width: 100%;
-    font-weight: bold;
-    border-radius: 8px;
+  background: #c9962e;
+  color: white;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+footer {
+  background: #c9962e;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-weight: bold;
 }
 
 .whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  background: #25D366;
+  color: white;
+  padding: 15px 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media(max-width: 800px) {
+  header, .hero, .fleet, .client-box, .contact {
+    flex-direction: column;
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-img, .fleet img {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <img src="logo.png" class="logo" alt="TEKA Logistic">
+  <nav>
+    <a href="#">ACASĂ</a>
+    <a href="#servicii">SERVICII</a>
+    <a href="#despre">DESPRE NOI</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <a href="#contact" class="btn">CERE OFERTĂ</a>
+</header>
+
 <div class="hero">
-    <img src="logo.png" class="logo" alt="TEKA Logistic Logo">
-    <h1>TEKA Logistic</h1>
-    <p>Curse internaționale • Mutări • Transport marfă • Livrări • Logistică</p>
-    <a href="#contact" class="btn">Cere ofertă acum</a>
+  <div class="hero-text">
+    <h1>TRANSPORT<br>RAPID ȘI SIGUR<br><span class="gold">ÎN TOATĂ EUROPA</span></h1>
+    <p>
+      TEKA Logistic oferă servicii profesionale de transport marfă, mutări, livrări și logistică pentru persoane fizice, magazine, depozite și firme.
+      Realizăm curse naționale și internaționale cu dube moderne, sigure și încăpătoare.
+    </p>
+    <a href="#contact" class="btn">CERE OFERTĂ</a>
+
+    <div class="icons">
+      <div>🌍 Curse naționale și internaționale</div>
+      <div>🚚 Livrări rapide</div>
+      <div>🛡️ Marfă în siguranță</div>
+      <div>🤝 Clienți mulțumiți</div>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="van1.png" alt="Dubă TEKA Logistic">
+    <div class="boxes">📦📦📦</div>
+  </div>
 </div>
 
-<section>
-    <h2>Serviciile noastre</h2>
-    <div class="cards">
-        <div class="card">🚚 Transport marfă rapid și sigur</div>
-        <div class="card">🏠 Mutări apartamente și case</div>
-        <div class="card">📦 Livrări colete și paleți</div>
-        <div class="card">🌍 Curse internaționale Europa</div>
-        <div class="card">📍 Logistică și distribuție</div>
-        <div class="card">🤝 Colaborări cu firme și depozite</div>
-    </div>
+<section id="servicii">
+  <h2>SERVICIILE NOASTRE</h2>
+  <div class="services">
+    <div class="card"><h3>🚚 Transport marfă</h3><p>Transport intern și internațional cu dube moderne.</p></div>
+    <div class="card"><h3>🏠 Mutări</h3><p>Mutări apartamente, case, birouri și mobilier.</p></div>
+    <div class="card"><h3>📦 Livrări</h3><p>Livrări pentru magazine, firme și persoane fizice.</p></div>
+    <div class="card"><h3>🏭 Magazine & depozite</h3><p>Colaborări pentru depozite, centre logistice și business-uri.</p></div>
+    <div class="card"><h3>🌍 Curse internaționale</h3><p>Deplasări în Europa, rapid și sigur.</p></div>
+  </div>
 </section>
 
-<section>
-    <h2>De ce TEKA Logistic?</h2>
-    <div class="cards">
-        <div class="card">✅ Seriozitate și punctualitate</div>
-        <div class="card">✅ Marfă transportată în siguranță</div>
-        <div class="card">✅ Comunicare rapidă prin WhatsApp</div>
+<section id="despre">
+  <h2>FLOTA NOASTRĂ</h2>
+  <div class="fleet">
+    <div>
+      <p>
+        Dispunem de dube spațioase și pregătite pentru diferite tipuri de transport:
+        mobilier, colete, paleți, electrocasnice, marfă pentru magazine și alte bunuri.
+      </p>
+      <p>
+        Punem accent pe punctualitate, comunicare rapidă și siguranța mărfii tale.
+      </p>
+      <a href="#contact" class="btn">VEZI DETALII</a>
     </div>
+    <img src="van2.png" alt="Flota TEKA Logistic">
+  </div>
 </section>
 
-<section>
-    <h2>Galerie</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="dubă logistică">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" alt="cutii depozit">
-        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c" alt="depozit logistic">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec" alt="client fericit">
+<section class="clients">
+  <h2>CLIENȚI MULȚUMIȚI</h2>
+  <div class="client-box">
+    <div>
+      <h3 class="gold">Seriozitate • Profesionalism • Încredere</h3>
+      <p>
+        Fiecare client este important pentru noi. Comunicăm rapid, respectăm timpul și tratăm fiecare transport cu grijă.
+      </p>
     </div>
+    <div class="client-photo">😊 📦 🤝</div>
+  </div>
 </section>
 
 <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>📞 Telefon: +39 XXX XXX XXX</p>
-    <p>📧 Email: contact@teka-logistic.com</p>
+  <div>
+    <h2>CONTACT</h2>
+    <p>📞 Telefon: +37368991462</p>
+    <p>📧 Email: contact@teacamihai2004@gmail.com</p>
     <p>📍 Italia / Europa</p>
+  </div>
 
-    <form>
-        <input type="text" placeholder="Numele tău">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Telefon">
-        <textarea placeholder="Ce ai nevoie să transporți?"></textarea>
-        <button>Trimite cererea</button>
-    </form>
+  <form>
+    <input type="text" placeholder="Numele tău">
+    <input type="text" placeholder="Telefon">
+    <input type="email" placeholder="Email">
+    <select>
+      <option>Tip serviciu</option>
+      <option>Transport marfă</option>
+      <option>Mutare</option>
+      <option>Livrare</option>
+      <option>Cursă internațională</option>
+    </select>
+    <textarea placeholder="Mesajul tău"></textarea>
+    <button>TRIMITE CEREREA</button>
+  </form>
 </section>
 
-<a class="whatsapp" href="https://wa.me/393XXXXXXXXX" target="_blank">💬 WhatsApp</a>
+<footer>
+  TEKA LOGISTIC — PARTENERUL TĂU DE ÎNCREDERE ÎN TRANSPORT ȘI LOGISTICĂ
+</footer>
+
+<a class="whatsapp" href="https://wa.me/393XXXXXXXXX">WhatsApp</a>
 
 </body>
 </html>
